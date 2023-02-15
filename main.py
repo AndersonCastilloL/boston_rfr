@@ -66,7 +66,7 @@ def main(n_estimators, max_depth):
     mlflow.log_metric("r2", r2_test)
 
     # Create a figure with the pred vs actual and log it to mlflow
-    plot_real_vs_prediction(yt, yp)
+    plot_real_vs_prediction(y_test, y_pred)
     
     # Log the model
     mlflow.sklearn.log_model(model, "model")
