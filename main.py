@@ -36,7 +36,7 @@ def plot_real_vs_prediction(actual, pred):
 
 @click.command()
 @click.option("--n_estimators", default=100)
-@click.option("--max_depth", default=3)
+@click.option("--max_depth", default=5)
 def main(n_estimators, max_depth):
     (x_train, y_train), (x_test, y_test) = tf.keras.datasets.boston_housing.load_data(
         path="boston_housing.npz", test_split=0.2, seed=113
